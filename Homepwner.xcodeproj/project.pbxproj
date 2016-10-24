@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AA36F9D51DB5A66100632394 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA36F9D41DB5A66100632394 /* ItemCell.swift */; };
 		AA36F9D71DB5C09C00632394 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA36F9D61DB5C09C00632394 /* DetailViewController.swift */; };
+		AACAB6C51DBDEA8A00BE5783 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACAB6C41DBDEA8A00BE5783 /* ImageStore.swift */; };
 		AAF3CC2F1DAC612D0022F0F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3CC2E1DAC612D0022F0F9 /* AppDelegate.swift */; };
 		AAF3CC311DAC612D0022F0F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3CC301DAC612D0022F0F9 /* ViewController.swift */; };
 		AAF3CC341DAC612D0022F0F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF3CC321DAC612D0022F0F9 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		AA36F9D41DB5A66100632394 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		AA36F9D61DB5C09C00632394 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AACAB6C41DBDEA8A00BE5783 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		AAF3CC2B1DAC612D0022F0F9 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF3CC2E1DAC612D0022F0F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAF3CC301DAC612D0022F0F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				AAF3CC401DAC62510022F0F9 /* ItemsViewController.swift */,
 				AA36F9D41DB5A66100632394 /* ItemCell.swift */,
 				AA36F9D61DB5C09C00632394 /* DetailViewController.swift */,
+				AACAB6C41DBDEA8A00BE5783 /* ImageStore.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				AAF3CC431DAC6DBD0022F0F9 /* Item.swift in Sources */,
 				AAF3CC311DAC612D0022F0F9 /* ViewController.swift in Sources */,
 				AA36F9D51DB5A66100632394 /* ItemCell.swift in Sources */,
+				AACAB6C51DBDEA8A00BE5783 /* ImageStore.swift in Sources */,
 				AAF3CC2F1DAC612D0022F0F9 /* AppDelegate.swift in Sources */,
 				AAF3CC451DAC744E0022F0F9 /* ItemStore.swift in Sources */,
 				AAF3CC411DAC62510022F0F9 /* ItemsViewController.swift in Sources */,

@@ -27,11 +27,13 @@ class ItemsViewController: UITableViewController {
                 let item = itemStore.allItems[row]
                 let detailViewController = segue.destinationViewController as! DetailViewController
                 detailViewController.item = item
+                detailViewController.imageStore = imageStore
             }
         }
     }
     
     var itemStore: ItemStore!
+    var imageStore: ImageStore!
     
     @IBAction func addNewItem(sender: AnyObject) {
         let newItem =  itemStore.createItem()
@@ -56,7 +58,8 @@ class ItemsViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             let item = itemStore.allItems[indexPath.row]
-            itemStore.removeItem(item)
+            self.itemStore.removeItem(item)
+            self.imageStore.deleteImageForKey(item.itemKey)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic )
         }
     }

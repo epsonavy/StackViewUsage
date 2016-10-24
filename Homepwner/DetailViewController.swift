@@ -15,6 +15,15 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     
+    var item: Item! {
+        didSet {
+            navigationItem.title = item.name
+        }
+    }
+    
+    var imageStore: ImageStore!
+    
+    
     @IBAction func takePicture(sender: UIBarButtonItem) {
         
         let imagePicker = UIImagePickerController()
@@ -31,6 +40,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        // Store images in the ImageStore
+        imageStore.setImage(image, forKey: item.itemKey)
         imageView.image = image
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -40,11 +52,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         view.endEditing(true)
     }
     
-    var item: Item! {
-        didSet {
-            navigationItem.title = item.name
-        }
-    }
+    
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -58,6 +66,10 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         serialNumberField.text = item.serialNumber
         valueField.text = "\(item.valueInDollars)"
         dateLabel.text = "\(item.dateCreated)"
+        
+        let key = item.itemKey
+        let imageToDisplay = imageStore.imageForKey(key)
+        imageView.image = imageToDisplay
     }
     
     override func viewWillDisappear(animated: Bool) {

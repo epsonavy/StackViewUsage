@@ -13,10 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let itemStore = ItemStore()
+    let imageStore = ImageStore()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        let imageStore = ImageStore()
         
         let navController = window!.rootViewController as! UINavigationController
         let itemsController = navController.topViewController as! ItemsViewController
